@@ -1,4 +1,4 @@
-var gridSquares;
+
 var upPressed = false;
 var downPressed = false;
 var leftPressed = false;
@@ -138,10 +138,25 @@ function myclickFunction() {
 	secondBomb.style.top = positionOfBomb + 5 +'px';
     },8)
     setInterval(function randomBomb(){
-	var randomZ = Math.floor(Math.random()*1000);
-	secondBomb.style.left = randomZ + 'px';
-    },1400)
-    },1000)
+	var randomX = Math.floor(Math.random()*1000);
+	secondBomb.style.left = randomX + 'px';
+    },1800)
+    
+
+//explosion
+
+	setInterval
+	(function(){
+		var positionTop = secondBomb.offsetTop;
+		secondBomb.style.top = positionTop + 0.5 + 'px';
+	},150);
+	var anotherRndm = Math.round(Math.random()*60);
+
+	setInterval(function(){
+		secondBomb.className = 'explosion';
+	},480 + anotherRndm);
+    },2000)
+	
 }
  //startbutton
 function mycallFunction() {
