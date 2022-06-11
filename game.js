@@ -139,8 +139,11 @@ function myclickFunction() {
     },8)
     setInterval(function randomBomb(){
 	var randomX = Math.floor(Math.random()*1000);
-	secondBomb.style.left = randomX + 'px';
-    },1800)
+	secondBomb.style.marginLeft = randomX + 30 + 'px';
+	secondBomb.style.marginTop = '110px';
+	secondBomb.style.left = '0%';
+	secondBomb.style.position = 'absolute';
+    },1500)
     
 
 //explosion
@@ -149,13 +152,13 @@ function myclickFunction() {
 	(function(){
 		var positionTop = secondBomb.offsetTop;
 		secondBomb.style.top = positionTop + 0.5 + 'px';
-	},150);
-	var anotherRndm = Math.round(Math.random()*60);
+	},130);
+	var anotherRndm = Math.round(Math.random()*65);
 
 	setInterval(function(){
 		secondBomb.className = 'explosion';
-	},480 + anotherRndm);
-    },2000)
+	},980 + anotherRndm);
+    },1200)
 	
 }
  //startbutton
